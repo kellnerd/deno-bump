@@ -29,13 +29,19 @@ Now you can use it by simply executing `bump`.
 
 ## Usage Examples
 
-Increment the minor version:
+Increment the minor version in `deno.json`:
 
 ```sh
 bump minor
 ```
 
 Alternatively you can also increment the major version or the patch version. 
+
+Explicitly specify the JSON package file which should be updated:
+
+```sh
+bump --file jsr.json
+```
 
 Automatically commit the changed `deno.json` file using a conventional commit message:
 
