@@ -18,6 +18,13 @@
       ]
     }
   },
+  "publish": {
+    "exclude": [
+      "deno.lock",
+      ".github/",
+      ".vscode/"
+    ]
+  },
   "tasks": {
     "ok": "deno fmt --check && deno lint",
     "bump": "deno run -R=deno.json -W=deno.json --allow-run=git cli.ts -c 'chore: Release version ' -t v"
