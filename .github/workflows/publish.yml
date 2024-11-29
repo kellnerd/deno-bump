@@ -1,0 +1,19 @@
+# https://jsr.io/docs/publishing-packages
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # The OIDC ID token is used for authentication with JSR.
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      # It is impossible to infer the type of a complex cliffy command.
+      - run: npx jsr publish --allow-slow-types
