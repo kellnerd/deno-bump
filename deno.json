@@ -6,7 +6,20 @@
     "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
     "@std/semver": "jsr:@std/semver@^1.0.3"
   },
+  "fmt": {
+    "exclude": [
+      "**/*.md"
+    ]
+  },
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-slow-types"
+      ]
+    }
+  },
   "tasks": {
+    "ok": "deno fmt --check && deno lint",
     "bump": "deno run -R=deno.json -W=deno.json --allow-run=git cli.ts -c 'chore: Release version ' -t v"
   }
 }
