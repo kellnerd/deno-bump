@@ -1,6 +1,6 @@
 {
   "name": "@kellnerd/bump",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "exports": "./cli.ts",
   "imports": {
     "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
